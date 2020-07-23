@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RepoDb;
 using RepoDbDemo.WebApplication1.Dal;
+using RepoDbDemo.WebApplication1.Models;
 using RepoDbDemo.WebApplication1.Options;
 
 namespace RepoDbDemo.WebApplication1
@@ -46,6 +47,7 @@ namespace RepoDbDemo.WebApplication1
             app.UseAuthorization();
 
             SqlServerBootstrap.Initialize();
+            FluentMapper.Entity<Student>().Table("Students");
 
             app.UseEndpoints(endpoints =>
             {
