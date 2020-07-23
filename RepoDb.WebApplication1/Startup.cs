@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RepoDb;
+using RepoDbDemo.WebApplication1.Dal;
+using RepoDbDemo.WebApplication1.Options;
 
-namespace RepoDb.WebApplication1
+namespace RepoDbDemo.WebApplication1
 {
     public class Startup
     {
@@ -23,6 +22,10 @@ namespace RepoDb.WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddTransient(typeof(IStudentDal), typeof(StudentDal));
+
+            services.Configure<StudentDalOptions>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,11 +45,13 @@ namespace RepoDb.WebApplication1
 
             app.UseAuthorization();
 
+            SqlServerBootstrap.Initialize();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Student}/{action=Index}/{id?}");
             });
         }
     }
