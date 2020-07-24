@@ -1,4 +1,4 @@
-﻿namespace RepoDbDemo.WebApplication1.Models
+﻿namespace RepoDbDemo.Models
 {
     public class Student
     {

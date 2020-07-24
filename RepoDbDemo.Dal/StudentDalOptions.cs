@@ -1,4 +1,4 @@
-﻿namespace RepoDbDemo.WebApplication1.Options
+﻿namespace RepoDbDemo.Dal.Options
 {
     public class StudentDalOptions
     {

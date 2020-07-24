@@ -1,7 +1,7 @@
-﻿using RepoDbDemo.WebApplication1.Models;
+﻿using RepoDbDemo.Models;
 using System.Collections.Generic;
 
-namespace RepoDbDemo.WebApplication1.Dal
+namespace RepoDbDemo.Dal
 {
     public interface IStudentDal
     {

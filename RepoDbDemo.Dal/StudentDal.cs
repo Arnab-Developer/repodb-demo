@@ -1,15 +1,15 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using RepoDb;
-using RepoDbDemo.WebApplication1.Models;
-using RepoDbDemo.WebApplication1.Options;
+using RepoDbDemo.Dal.Options;
+using RepoDbDemo.Models;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace RepoDbDemo.WebApplication1.Dal
+namespace RepoDbDemo.Dal
 {
-    internal class StudentDal : IStudentDal
+    public class StudentDal : IStudentDal
     {
         private readonly StudentDalOptions _studentDalOptions;
 

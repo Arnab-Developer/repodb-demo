@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RepoDb;
-using RepoDbDemo.WebApplication1.Dal;
-using RepoDbDemo.WebApplication1.Models;
-using RepoDbDemo.WebApplication1.Options;
+using RepoDbDemo.Dal;
+using RepoDbDemo.Dal.Options;
+using RepoDbDemo.Models;
 
 namespace RepoDbDemo.WebApplication1
 {

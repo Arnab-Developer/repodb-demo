@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RepoDbDemo.WebApplication1.Dal;
-using RepoDbDemo.WebApplication1.Models;
+using RepoDbDemo.Dal;
+using RepoDbDemo.Models;
 using System.Collections.Generic;
 
 namespace RepoDbDemo.WebApplication1.Controllers
